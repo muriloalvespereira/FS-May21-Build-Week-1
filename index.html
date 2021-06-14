@@ -78,6 +78,44 @@
             </div>
             <div><span>Murilo Alves</span></div>
             <div class="pr-2"><i class="bi bi-caret-down-fill"></i></div>
+            <div class="account-avatar">
+              <div class="p-2 d-flex menu-avatar">
+                <div class="d-flex btw-menu-avatar hide-over">
+                  <p>Account</p>
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-ulyrgf-0 ghlXvf"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="hide-over"><p>Profile</p></div>
+                <div class="d-flex btw-menu-avatar hide-over">
+                  <p>Go to Premium</p>
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-ulyrgf-0 ghlXvf"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M15 7V1H9v1h4.29L7.11 8.18l.71.71L14 2.71V7h1zM1 15h12V9h-1v5H2V4h5V3H1v12z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="hide-over"><p>Log out</p></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -236,9 +274,18 @@
       jQuery(function () {
         jQuery(window).scroll(function () {
           if (jQuery(this).scrollTop() > 50) {
-            $(".navrow").addClass("menu-diferente");
+            $(".navrow").addClass("menu-different");
           } else {
-            $(".navrow").removeClass("menu-diferente");
+            $(".navrow").removeClass("menu-different");
+          }
+        });
+      });
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 100) {
+            $(".navrow").addClass("menu-different-two");
+          } else {
+            $(".navrow").removeClass("menu-different-two");
           }
         });
       });
