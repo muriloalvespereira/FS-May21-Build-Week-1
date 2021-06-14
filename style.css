@@ -1,0 +1,43 @@
+.buttom-nav {
+  width: 30px;
+  height: 30px;
+  background-color: #181818;
+  border-radius: 50%;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  margin-left: 10px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-left: 12px;
+}
+.avatar-nav {
+  background-color: #181818;
+  height: 30px;
+  width: 130px;
+  border-radius: 50px;
+  align-items: center;
+}
+.bi-caret-down-fill {
+  color: white;
+}
+span {
+  color: white;
+  font-size: 13px;
+}
+.img-avatar {
+  width: 25px;
+  height: 25px;
+}
