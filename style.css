@@ -1,0 +1,34 @@
+.row-cols-1 > * {
+  margin-bottom: 20px;
+}
+.card-text {
+  line-height: 18px;
+}
+.card {
+  background-color: #222326;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover {
+  background-color: rgb(56, 55, 55);
+}
+.spotify-badge {
+  position: absolute;
+  top: 21px;
+  left: 21px;
+}
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.play {
+  position: absolute;
+  bottom: 21px;
+  right: 21px;
+  font-size: x-large;
+  display: none;
+}
+.card:hover .play {
+  display: block;
+}
