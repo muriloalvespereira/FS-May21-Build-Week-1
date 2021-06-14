@@ -8,41 +8,40 @@ body {
   );
 }
 .navrow {
-  position: fixed;
+  background: transparent;
+}
+.menu-diferente {
+  background: black;
 }
 
-.buttom-nav {
+.buttom-nav-left {
   width: 30px;
   height: 30px;
-  background-color: #181818;
+  background-color: black;
   border-radius: 50%;
+  padding-left: 2px;
+}
+.buttom-nav-right {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  padding-left: 3px;
 }
 
-.arrow {
-  border: solid white;
-  border-width: 0 1px 1px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  margin-left: 10px;
-}
-
-.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  margin-left: 12px;
-}
 .avatar-nav {
-  background-color: #181818;
+  background-color: black;
   height: 30px;
   width: 150px;
   border-radius: 50px;
   align-items: center;
+  cursor: pointer;
 }
+
+.avatar-nav:hover {
+  background-color: #282828;
+}
+
 .bi-caret-down-fill {
   color: white;
   font-size: 10px;
