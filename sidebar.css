@@ -16,9 +16,6 @@ footer > div > div::after {
   content: "Upgrade to premium";
   text-align: white;
 }
-/* .playlist {
-  position: absolute;
-} */
 
 .plus-btn {
   position: relative;
@@ -66,51 +63,4 @@ footer {
   position: fixed;
   bottom: 0;
   background-color: black;
-}
-
-/* .liked-btn {
-  position: relative;
-  width: 100px;
-  height: 90px;
-}
-.liked-btn:before,
-.liked-btn:after {
-  position: absolute;
-  content: "";
-  left: 50px;
-  top: 0;
-  width: 50px;
-  height: 80px;
-  background: white;
-  border-radius: 50px 50px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-}
-.liked-btn:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
-} */
-
-.player {
-  position: fixed;
-  bottom: 0;
-  background-color: white;
-  width: 100%;
-  height: 90px;
-  color: white;
-  z-index: 100;
-  line-height: 90px;
-  text-align: center;
-}
-.player-content {
-  display: flex;
-}
-.player-content img {
-  height: 90px;
-}
-.player-content p {
-  margin-top: 0;
-  margin-left: 20px;
-  font-size: 24px;
 }
