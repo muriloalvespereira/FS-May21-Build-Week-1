@@ -18,15 +18,29 @@ body {
 
 .navrow {
   background: transparent;
+  position: fixed;
+  top: 0;
   z-index: 10;
   padding-right: 32px;
+  width: 100%;
 }
-
+.name-top {
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 65px;
+  opacity: 0;
+}
 .menu-different {
   background: rgba(0, 0, 0, 0.6);
 }
 .menu-different-two {
   background: rgba(0, 0, 0, 1);
+}
+.menu-different-three {
+  background: rgba(80, 16, 54, 0.5);
+}
+.menu-different-four {
+  background: rgba(80, 16, 54, 1);
 }
 
 .buttom-nav-left {
@@ -56,7 +70,7 @@ body {
   cursor: pointer;
 }
 .buttom-avatar-nav {
-  padding-right: 15px;
+  padding-right: 246px;
 }
 
 .avatar-nav:hover {
@@ -110,7 +124,7 @@ svg {
 }
 
 .btn-nav {
-  /* padding-left: 38px; */
+  padding-left: 30px;
 }
 
 span {
@@ -134,6 +148,17 @@ h6 {
   font-family: "Helvetica", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
+}
+.a-changes {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
 }
 .color-svg {
   color: gray;

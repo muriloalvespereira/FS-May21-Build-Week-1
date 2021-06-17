@@ -21,6 +21,7 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="sidebar.css" />
+    <link rel="stylesheet" href="album.css" />
     <script
       src="https://kit.fontawesome.com/1a2c6a184e.js"
       crossorigin="anonymous"
@@ -64,7 +65,11 @@
                     />
                   </svg>
                 </div>
-                <div class="d-flex"><h6 class="d-flex pl-3 mb-0">Home</h6></div>
+                <div class="d-flex">
+                  <h6 class="d-flex pl-3 mb-0">
+                    <a href="./index.html" class="put-color a-changes">Home</a>
+                  </h6>
+                </div>
               </div>
               <div
                 class="col-12 search d-flex align-items-center pb-3 put-color"
@@ -195,21 +200,20 @@
     <div class="container-fluid pl-0">
       <div class="row big-row">
         <div style="width: 210px"></div>
+
         <div class="col pr-0">
-          <div class="col">
+          <div class="img-bgd">
+            <div class="album-name text-white">
+              <p>
+                <i class="bi bi-patch-check-fill text-primary"></i> Verified
+                Artist
+              </p>
+              <h1 class="name font-weight-bolder">Queen</h1>
+              <p class="number-listner">50,466,868 monthly listners</p>
+            </div>
             <!-- ----------------- NAV BAR ----------------- -->
-            <div
-              class="
-                row
-                pt-3
-                pb-3
-                px-3
-                justify-content-between
-                navrow
-                sticky-top
-              "
-            >
-              <div class="btn-nav d-flex pl-4">
+            <div class="row pt-3 pb-3 px-3 justify-content-between navrow">
+              <div class="btn-nav d-flex">
                 <div class="buttom-nav-left">
                   <svg
                     role="img"
@@ -250,6 +254,8 @@
                     ></polyline>
                   </svg>
                 </div>
+                <div class="ml-4 play-button-nav-top position-absolute"></div>
+                <div class="text-white name-top">Queen</div>
               </div>
               <div class="buttom-avatar-nav">
                 <div class="avatar-nav d-flex justify-content-between pb-1">
@@ -322,201 +328,362 @@
               </div>
             </div>
             <!-- ----------------- NAV BAR ----------------- -->
-            <div
-              class="container main-container pl-4 mt-5"
-              style="max-width: 100%"
-            >
-              <h5 class="pt-4">Good Morning</h5>
-              <div class="row px-3 pt-2">
-                <div class="col px-0 mr-3">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (18).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Burning Jazz-rock Fusion</p>
+          </div>
+          <div class="col">
+            <div class="container main-container" style="max-width: 100%">
+              <div class="row">
+                <div class="col d-flex align-items-center mt-4">
+                  <div class="play-button"></div>
+
+                  <div>
+                    <span class="follow text-white">Follow</span>
+                  </div>
+                  <div class="three-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row py-3">
+                <div
+                  class="
+                    col-lg-8 col-sm-12
+                    text-white text-title
+                    font-weight-bold
+                  "
+                >
+                  Popular
+                </div>
+              </div>
+              <div class="row pl-4">
+                <div class="col-lg-8 col-sm-12 text-white">
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">1</p>
                         </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheeran.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">Perfect</p>
                       </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">2</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheeran1.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">Shape of you</p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">3</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheeran3.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">Photograph</p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">4</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="./img/edsheeran1.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">Afterglow</p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
+                    </div>
+                  </div>
+                  <div class="row rowz d-flex align-items-center p-2">
+                    <div class="col-8 pr-0">
+                      <div class="text-white d-flex align-items-center">
+                        <div
+                          class="
+                            num-icon
+                            d-flex
+                            position-relative
+                            play-button-list
+                          "
+                        >
+                          <p class="hide-num mb-2">5</p>
+                        </div>
+                        <div class="imgg mx-4">
+                          <img
+                            class="img-thumb"
+                            src="/img/edsheran2.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <p class="album-names mb-lg-2 pt-2">
+                          Thinking out loud
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
+                      10,234,560,463
+                    </div>
+                    <div class="heart text-white-50">
+                      <svg
+                        role="img"
+                        height="16"
+                        width="16"
+                        viewBox="0 0 16 16"
+                        class="Svg-ulyrgf-0 ghlXvf"
+                      >
+                        <path
+                          d="M13.764 2.727a4.057 4.057 0 00-5.488-.253.558.558 0 01-.31.112.531.531 0 01-.311-.112 4.054 4.054 0 00-5.487.253A4.05 4.05 0 00.974 5.61c0 1.089.424 2.113 1.168 2.855l4.462 5.223a1.791 1.791 0 002.726 0l4.435-5.195A4.052 4.052 0 0014.96 5.61a4.057 4.057 0 00-1.196-2.883zm-.722 5.098L8.58 13.048c-.307.36-.921.36-1.228 0L2.864 7.797a3.072 3.072 0 01-.905-2.187c0-.826.321-1.603.905-2.187a3.091 3.091 0 012.191-.913 3.05 3.05 0 011.957.709c.041.036.408.351.954.351.531 0 .906-.31.94-.34a3.075 3.075 0 014.161.192 3.1 3.1 0 01-.025 4.403z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="col-1 d-flex align-items-center">
+                      <p
+                        class="
+                          song-time
+                          mb-lg-n1
+                          d-md-block d-sm-none
+                          text-white-50
+                          pr-3
+                        "
+                      >
+                        4:10
+                      </p>
+                      <div class="dots text-white">...</div>
                     </div>
                   </div>
                 </div>
-                <div class="col px-0 mr-3 second-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (14).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Liked Songs</p>
-                        </div>
-                      </div>
+                <div class="col-lg-4 text-white">
+                  <div class="row mt-lg-n5 mb-3 pl-3">
+                    <div
+                      class="
+                        text-title
+                        col col-lg-4
+                        text-white
+                        font-weight-bold
+                        text-nowrap
+                      "
+                    >
+                      Artist pick
                     </div>
                   </div>
-                </div>
-                <div class="col px-0 third-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (15).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Metal Ballads</p>
-                        </div>
-                      </div>
+                  <div class="col d-flex">
+                    <div class="imgg-right">
+                      <img
+                        src="./img/Adam-Lambert-ALBUM-COVER.jpg"
+                        class="img-thumb"
+                        alt=""
+                      />
                     </div>
-                  </div>
-                </div>
-                <div class="col px-0 fourth-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
+                    <div class="last-img pl-3">
+                      <p class="text-white-50 posted">
                         <img
-                          src="./assets/tile (16).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">POST HUMAN: SURVIVAL</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 fifth-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (17).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">This is Joe Bonamassa</p>
-                        </div>
-                      </div>
+                          src="/img/ED.jpg"
+                          class="rounded rounded-circle px-1 py-1"
+                          alt=""
+                        />Posted By Queen
+                      </p>
+                      <p class="album-name-small pl-1">Queen Best Of</p>
+                      <p class="text-white-50 posted pl-1">Playlist</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row px-3 pt-2">
-                <div class="col px-0 mr-3">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (18).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Midian</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 mr-3 second-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (14).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Nymphetamine</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 third-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (15).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">amo</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 fourth-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (16).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">LE BASK</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 fifth-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (17).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">opeth</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="row">
+                <div class="col mt-3">
+                  <a
+                    href="#"
+                    class="see-more text-white-50 pl-3"
+                    style="font-size: 14px"
+                    >SEE MORE</a
+                  >
                 </div>
               </div>
+
               <div class="row justify-content-between px-3">
                 <div class="d-flex">
-                  <h6 class="mt-3 h6-body">Recently Played</h6>
+                  <h6 class="mt-5 h6-body">Recently Played</h6>
                 </div>
                 <div class="d-flex">
-                  <h6 class="see-all mt-3">SEE ALL</h6>
+                  <h6 class="see-all mt-3"></h6>
                 </div>
               </div>
 
@@ -954,18 +1121,36 @@
       jQuery(function () {
         jQuery(window).scroll(function () {
           if (jQuery(this).scrollTop() > 50) {
-            $(".navrow").addClass("menu-different");
+            $(".navrow").addClass("menu-different-three");
           } else {
-            $(".navrow").removeClass("menu-different");
+            $(".navrow").removeClass("menu-different-three");
           }
         });
       });
       jQuery(function () {
         jQuery(window).scroll(function () {
-          if (jQuery(this).scrollTop() > 100) {
-            $(".navrow").addClass("menu-different-two");
+          if (jQuery(this).scrollTop() > 285) {
+            $(".navrow").addClass("menu-different-four");
           } else {
-            $(".navrow").removeClass("menu-different-two");
+            $(".navrow").removeClass("menu-different-four");
+          }
+        });
+      });
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 330) {
+            $(".play-button-nav-top").addClass("show-play");
+          } else {
+            $(".play-button-nav-top").removeClass("show-play");
+          }
+        });
+      });
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 330) {
+            $(".name-top").addClass("show-play");
+          } else {
+            $(".name-top").removeClass("show-play");
           }
         });
       });
