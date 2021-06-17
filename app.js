@@ -6,4 +6,3 @@ function addPlaylist(){
     ul.appendChild(list)
    
 }
-addPlaylist()

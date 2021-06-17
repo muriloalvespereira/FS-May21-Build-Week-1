@@ -35,6 +35,7 @@ body {
   background-color: black;
   border-radius: 50%;
   padding-left: 2px;
+  cursor: pointer;
 }
 .buttom-nav-right {
   width: 30px;
@@ -42,6 +43,7 @@ body {
   background-color: black;
   border-radius: 50%;
   padding-left: 3px;
+  cursor: pointer;
 }
 
 .avatar-nav {
@@ -128,15 +130,15 @@ h5 {
   font-size: 24px;
 }
 h6 {
-  color: #b6b6b6;
+  color: rgba(255, 255, 255, 0.5);
   font-family: "Helvetica", Arial, sans-serif;
   font-weight: 700;
   font-size: 16px;
 }
 .color-svg {
-  color: #b6b6b6;
-  fill: #b6b6b6;
-  stroke: #b6b6b6;
+  color: gray;
+  fill: gray;
+  stroke: gray;
 }
 .card-top-color {
   background-color: rgba(255, 255, 255, 0.1);
@@ -249,10 +251,34 @@ h6 {
   border-left: 10px solid white;
   border-bottom: 7px solid transparent;
   top: 0;
-  right: 0;
+  right: -3px;
   bottom: 0;
   left: 0;
   margin: auto;
+}
+.photo-play {
+  position: absolute;
+  bottom: 35px;
+  right: 1px;
+  width: 28px;
+  height: 28px;
+  font-size: x-large;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 0.4s ease;
+}
+.photo-play-two {
+  position: absolute;
+  bottom: 185px;
+  right: -50px;
+  width: 28px;
+  height: 28px;
+  font-size: x-large;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 0.4s ease;
 }
 
 .play-bottom {
@@ -288,6 +314,62 @@ h6 {
   opacity: 1;
   transform: translateX(10px);
 }
+.img-nav-bottom:hover .photo-play {
+  opacity: 1;
+  transform: translateY(10px);
+}
+.img-nav-bottom:hover {
+  cursor: pointer;
+}
+.photo-play:hover {
+  opacity: 1;
+  transform: translateY(10px);
+  background-color: rgba(0, 0, 0, 1);
+}
+.photo-play-two:hover {
+  opacity: 1;
+  transform: translateY(10px);
+  background-color: rgba(0, 0, 0, 1);
+}
+.under-upgrade:hover .photo-play-two {
+  opacity: 1;
+  transform: translateY(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.fa-chevron-up {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 7px;
+  margin: auto;
+  transform: translateY(6px);
+}
+.fa-chevron-down {
+  position: absolute;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 7px;
+  margin: auto;
+  transform: translateY(8px);
+}
+.under-premium {
+  width: 237px;
+}
+.under-upgrade {
+  position: absolute;
+  transform: translateX(-25px);
+  top: 0;
+  right: 0;
+  bottom: 0px;
+  left: 0px;
+}
 .card-title {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -305,6 +387,22 @@ h6 {
   font-size: 12px;
   font-family: "Helvetica", Arial, sans-serif;
   color: #b6b6b6;
+  cursor: pointer;
+}
+.see-all:hover {
+  text-decoration: underline;
+}
+.put-color:hover h6 {
+  color: white;
+  cursor: pointer;
+}
+.put-color:hover svg {
+  fill: white;
+  cursor: pointer;
+}
+.put-color:hover #library-icon {
+  fill: white;
+  cursor: pointer;
 }
 .sub-title {
   font-weight: 400;
@@ -333,7 +431,7 @@ h6 {
 }
 
 .currentColor {
-  color: white;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .spotify-logo--text {
@@ -384,6 +482,7 @@ h6 {
   padding-top: 20px;
   padding-right: 0px;
 }
+
 .p-bottom {
   font-family: Helvetica, Arial, sans-serif;
   color: #b6b6b6;
@@ -415,7 +514,26 @@ h6 {
   justify-content: flex-end;
 }
 .svg-color {
+  color: rgba(255, 255, 255, 0.5);
+}
+.svg-color:hover {
   color: white;
+}
+svg {
+  fill: rgba(255, 255, 255, 0.5);
+}
+svg:hover {
+  fill: white;
+}
+#logo {
+  fill: white;
+}
+.h6-body {
+  color: #ffffff;
+  cursor: pointer;
+}
+.h6-body:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 1199.98px) {
@@ -445,7 +563,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 10px;
   height: 10px;
   border-radius: 1em;
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
   border: none;
   box-shadow: 0 0 2px black;
   margin-top: calc(3px * 0.5 - 10px * 0.5);
@@ -461,7 +579,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 input[type="range"]:hover::-webkit-slider-thumb {
@@ -469,7 +587,7 @@ input[type="range"]:hover::-webkit-slider-thumb {
 }
 
 input[type="range"]::-webkit-slider-thumb:active {
-  background: white;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 input[type="range"]:active::-webkit-slider-runnable-track {
@@ -477,7 +595,12 @@ input[type="range"]:active::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  background: linear-gradient(#fff, #fff) 0 / var(--sx) 100% no-repeat, #535353;
+  background: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      )
+      0 / var(--sx) 100% no-repeat,
+    #535353;
 }
 
 input[type="range"]:hover::-webkit-slider-runnable-track {
@@ -491,4 +614,9 @@ input[type="range"]:active::-webkit-slider-runnable-track {
 }
 input[type="range"]:focus::-webkit-slider-track {
   background-color: #32aa56;
+}
+
+.list-unstyled > li:hover {
+  cursor: pointer;
+  color: white;
 }

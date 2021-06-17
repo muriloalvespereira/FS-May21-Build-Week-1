@@ -34,7 +34,11 @@
       <div class="row">
         <div class="col-12">
           <div class="logo ml-4">
-            <svg viewBox="0 0 1134 340" class="spotify-logo--text mt-4">
+            <svg
+              viewBox="0 0 1134 340"
+              class="spotify-logo--text mt-4"
+              id="logo"
+            >
               <title>Spotify</title>
               <path
                 class="currentColor"
@@ -45,7 +49,7 @@
 
           <section class="top mt-3 ml-4">
             <div class="row">
-              <div class="col-12 home d-flex align-items-center pb-3">
+              <div class="col-12 d-flex align-items-center pb-3 put-color">
                 <div class="d-flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -60,11 +64,11 @@
                     />
                   </svg>
                 </div>
-                <div class="d-flex">
-                  <h6 class="d-flex pl-3 mb-0">Home</h6>
-                </div>
+                <div class="d-flex"><h6 class="d-flex pl-3 mb-0">Home</h6></div>
               </div>
-              <div class="col-12 search d-flex align-items-center pb-3">
+              <div
+                class="col-12 search d-flex align-items-center pb-3 put-color"
+              >
                 <div class="d-flex">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,18 +87,19 @@
                   <h6 class="d-flex pl-3 mb-0">Search</h6>
                 </div>
               </div>
-              <div class="col-12 library d-flex align-items-center pb-3">
+              <div
+                class="col-12 library d-flex align-items-center pb-3 put-color"
+              >
                 <div class="d-flex">
                   <svg
-                    class="currentColor"
                     viewBox="0 0 512 512"
                     width="20"
                     height="20"
                     xmlns="http://www.w3.org/2000/svg"
+                    id="library-icon"
                   >
                     <path
                       d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
-                      fill="currentColor"
                     ></path>
                   </svg>
                 </div>
@@ -106,7 +111,7 @@
           </section>
 
           <section class="middle mt-5 ml-4">
-            <div class="d-flex create align-items-center">
+            <div class="d-flex create align-items-center put-color">
               <div
                 onclick="addPlaylist()"
                 class="border d-flex btn-create"
@@ -119,7 +124,7 @@
                 <h6 class="pl-3 mb-0">Create Playlist</h6>
               </div>
             </div>
-            <div class="d-flex liked align-items-center pb-3 pt-3">
+            <div class="d-flex liked align-items-center pb-3 pt-3 put-color">
               <div class="liked-songs">
                 <svg
                   role="img"
@@ -144,14 +149,14 @@
           </section>
           <section class="playlist mt-4 ml-4">
             <div class="added-playlist">
-              <ul class="list-unstyled" id="add-list">
+              <ul class="list-unstyled text-white-50" id="add-list">
                 <li></li>
               </ul>
             </div>
           </section>
           <section class="ml-4">
             <footer>
-              <div class="d-flex align-items-center pt-3">
+              <div class="d-flex align-items-center pt-3 put-color">
                 <div class="pb-3 footer-logo d-flex">
                   <svg
                     class="color-svg"
@@ -168,6 +173,17 @@
                 </div>
                 <div class="d-flex">
                   <h6 class="mb-3 pl-1">Upgrade to premium</h6>
+                </div>
+              </div>
+              <div
+                class="position-relative show-album d-none"
+                style="height: 218px"
+              >
+                <div class="under-upgrade">
+                  <img src="./img/drake.png" class="under-premium" alt="" />
+                  <div class="photo-play-two">
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
                 </div>
               </div>
             </footer>
@@ -493,7 +509,9 @@
                 </div>
               </div>
               <div class="row justify-content-between px-3">
-                <div class="d-flex"><h6 class="mt-3">Recently Played</h6></div>
+                <div class="d-flex">
+                  <h6 class="mt-3 h6-body">Recently Played</h6>
+                </div>
                 <div class="d-flex">
                   <h6 class="see-all mt-3">SEE ALL</h6>
                 </div>
@@ -625,7 +643,9 @@
 
               <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
               <div class="row justify-content-between px-3">
-                <div class="d-flex"><h6 class="mt-3">Shows to try</h6></div>
+                <div class="d-flex">
+                  <h6 class="mt-3 h6-body">Shows to try</h6>
+                </div>
                 <div class="d-flex">
                   <h6 class="see-all mt-3">SEE ALL</h6>
                 </div>
@@ -767,14 +787,17 @@
     </div>
     <div class="bottom-bar">
       <div class="d-flex justify-content-between">
-        <div class="col d-flex no-gutters">
+        <div class="col d-flex no-gutters pl-0">
           <div class="row row-bottom">
-            <div class="col d-flex img-nav-bottom">
+            <div class="col img-nav-bottom">
               <img
                 src="./img/smalldrake.jpg"
                 class="card-img-bottom img-fluid"
                 alt="..."
               />
+              <div class="photo-play">
+                <i class="fas fa-chevron-up"></i>
+              </div>
             </div>
             <div class="col d-flex direction-bar pl-3 pt-1">
               <h6 class="pt-4 mb-0 h6-bottom">Survival</h6>
@@ -906,6 +929,23 @@
 
     <div style="height: 150px"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+      let showUpAlbum = document.querySelector(".photo-play");
+      let showUpAlbumOne = document.querySelector(".img-nav-bottom");
+      let showUpAlbumTwo = document.querySelector(".show-album");
+      showUpAlbum.onclick = function () {
+        showUpAlbumOne.classList.remove("d-flex");
+        showUpAlbumOne.classList.add("d-none");
+        showUpAlbumTwo.classList.remove("d-none");
+        showUpAlbumTwo.classList.add("d-flex");
+      };
+      let hideUpAlbum = document.querySelector(".photo-play-two");
+      hideUpAlbum.onclick = function () {
+        showUpAlbumTwo.classList.remove("d-flex");
+        showUpAlbumTwo.classList.add("d-none");
+        showUpAlbumOne.classList.add("d-flex");
+      };
+    </script>
 
     <script type="text/javascript">
       jQuery(function () {
