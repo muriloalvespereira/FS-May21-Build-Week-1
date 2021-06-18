@@ -18,6 +18,7 @@
 
     <title>Album</title>
     <link rel="stylesheet" href="album.css" />
+    <script src="album.js"></script>
   </head>
   <body>
     <div class="jumbotron jumbotron-fluid">
@@ -61,6 +62,7 @@
 
       <div class="three d-flex mb-5" id="action-bar-row">
         <div class="play-button pb-2rem"></div>
+        <div class="play-big"></div>
         <div class="heart pl-4 pt-3">
           <svg role="img" height="32" width="32" viewBox="0 0 32 32" class="">
             <path
@@ -85,29 +87,36 @@
         </div>
       </div>
 
+
+
+      
+      <div class="row song-info sticky-top">
+        <div class="col-4 d-flex pt-2">
+          <h6>#</h6>
+          <h6 class="pl-3">TITLE</h6>
+        </div>
+        <div class="col-3">ALBUM</div>
+        <div class="col-3">DATE ADDED</div>
+        <div class="col-2 pl-5">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M7.999 3H6.999V7V8H7.999H9.999V7H7.999V3ZM7.5 0C3.358 0 0 3.358 0 7.5C0 11.642 3.358 15 7.5 15C11.642 15 15 11.642 15 7.5C15 3.358 11.642 0 7.5 0ZM7.5 14C3.916 14 1 11.084 1 7.5C1 3.916 3.916 1 7.5 1C11.084 1 14 3.916 14 7.5C14 11.084 11.084 14 7.5 14Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+      </div>
+
+
+
       <!------------------------------------------------------------ list of songs-------------------------------------------------------->
       <section class="all-songs">
         <div class="container px-4">
-          <div class="row song-info sticky-top">
-            <div class="col-4 d-flex pt-2">
-              <h6>#</h6>
-              <h6 class="pl-3">TITLE</h6>
-            </div>
-            <div class="col-3">ALBUM</div>
-            <div class="col-3">DATE ADDED</div>
-            <div class="col-2 pl-5">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path
-                  d="M7.999 3H6.999V7V8H7.999H9.999V7H7.999V3ZM7.5 0C3.358 0 0 3.358 0 7.5C0 11.642 3.358 15 7.5 15C11.642 15 15 11.642 15 7.5C15 3.358 11.642 0 7.5 0ZM7.5 14C3.916 14 1 11.084 1 7.5C1 3.916 3.916 1 7.5 1C11.084 1 14 3.916 14 7.5C14 11.084 11.084 14 7.5 14Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-          </div>
 
-          <div class="row" id="one">
+          <div class="row one" onclick="togglePlay()" >
             <div class="list-song text-align-center col-4 d-flex">
               <div class="mr-3 song-number">1</div>
+              <audio id="audio" src="Drake - Toosie Slide.mp3"></audio>
               
 
                <div class="mr-3 place-holder"></div>
@@ -165,7 +174,7 @@
             </div>
           </div>
 
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">2</div>
 
@@ -223,7 +232,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">3</div>
 
@@ -281,7 +290,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">4</div>
 
@@ -339,7 +348,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">5</div>
 
@@ -397,7 +406,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">6</div>
 
@@ -455,7 +464,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">7</div>
 
@@ -513,7 +522,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">8</div>
 
@@ -571,7 +580,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">9</div>
 
@@ -629,7 +638,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">10</div>
               <div class="mr-3 place-holder"></div>
@@ -687,7 +696,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">11</div>
               <div class="mr-3 place-holder"></div>
@@ -745,7 +754,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">12</div>
               <div class="mr-3 place-holder"></div>
@@ -803,7 +812,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">13</div>
               <div class="mr-3 place-holder"></div>
@@ -861,7 +870,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">14</div>
               <div class="mr-3 place-holder"></div>
@@ -919,7 +928,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">15</div>
               <div class="mr-3 place-holder"></div>
@@ -977,7 +986,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">16</div>
               <div class="mr-3 place-holder"></div>
@@ -1035,7 +1044,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">17</div>
               <div class="mr-3 place-holder"></div>
@@ -1093,7 +1102,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">18</div>
               <div class="mr-3 place-holder"></div>
@@ -1151,7 +1160,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">19</div>
               <div class="mr-3 place-holder"></div>
@@ -1209,7 +1218,7 @@
               </div>
             </div>
           </div>
-          <div class="row" id="one">
+          <div class="row one" >
             <div class="list-song col-4 d-flex">
               <div class="mr-3 song-number">20</div>
               <div class="mr-3 place-holder"></div>
