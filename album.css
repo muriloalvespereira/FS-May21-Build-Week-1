@@ -84,6 +84,7 @@ body {
 
 #one:hover {
   background-color: rgb(59, 58, 58);
+  border-radius: 4px;
 }
 #one:hover .song-number {
   opacity: 0;
