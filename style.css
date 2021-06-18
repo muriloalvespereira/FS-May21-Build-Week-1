@@ -11,6 +11,9 @@ body {
   margin-left: 0px;
   padding-left: 5px;
 }
+.a-changes-menu {
+  color: white;
+}
 
 .main-container {
   /* padding-right: 30px; */
@@ -41,6 +44,12 @@ body {
 }
 .menu-different-four {
   background: rgba(80, 16, 54, 1);
+}
+.menu-different-five {
+  background: rgba(60, 94, 88, 0.5);
+}
+.menu-different-six {
+  background: rgba(60, 94, 88, 1);
 }
 
 .buttom-nav-left {
@@ -91,6 +100,7 @@ body {
   opacity: 0;
   transition: opacity 0.25s ease;
 }
+
 .avatar-nav:hover .account-avatar {
   pointer-events: initial;
   opacity: 1;
@@ -155,6 +165,20 @@ h6 {
   font-weight: 700;
   font-size: 16px;
   text-decoration: none;
+}
+.a-changes-jumbo {
+  color: rgba(255, 255, 255);
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.a-changes-jumbo:hover {
+  color: rgba(255, 255, 255);
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 a:hover {
   color: white;
@@ -645,3 +669,7 @@ input[type="range"]:focus::-webkit-slider-track {
   cursor: pointer;
   color: white;
 }
+
+/* .list-unstyled {
+  overflow-y: scroll;
+} */
