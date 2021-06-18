@@ -28,6 +28,20 @@ body {
   margin-bottom: 2rem;
   padding-bottom: 0;
 }
+.list-song{
+  line-height: 23px;
+}
+.song-title{
+  padding-left: 19px;
+}
+.song-number{
+  position: absolute;
+  right: 20.5em;
+  top: 9px;
+}
+.place-holder{
+  opacity: 0;
+}
 .list-song img {
   vertical-align: top;
 }
@@ -39,9 +53,9 @@ body {
   height: 0;
   position: absolute;
   top: 0;
-  bottom: 10px;
+  bottom: 22px;
   left: 0;
-  right: 324px;
+  right: 336px;
   margin: auto;
   border-style: solid;
   border-width: 7px 0 7px 10px;
@@ -52,6 +66,10 @@ body {
 .little-heart,
 .dots {
   opacity: 0;
+}
+#one{
+ height: 57px;
+ padding-top: 0.5em;
 }
 #one:hover .little-heart {
   opacity: 1;
@@ -107,9 +125,7 @@ body {
   justify-content: center;
   vertical-align: middle;
 }
-.most-streamed {
-  color: rgb(218, 216, 216);
-}
+
 .Throwbacks {
   font-size: 70px;
   font-weight: 900;
