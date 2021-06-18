@@ -61,6 +61,7 @@ body {
   border-width: 7px 0 7px 10px;
   border-color: transparent transparent transparent white;
   opacity: 0;
+  cursor: pointer;
 }
 
 .little-heart,
