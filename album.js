@@ -1,7 +1,10 @@
 
-function togglePlay() {
-    let MyAudio = document.querySelector("audio");
-
-  MyAudio.paused ? MyAudio.play() : MyAudio.pause();
+function playSong() {
+    let playSong = document.querySelector("audio");
+    if (playSong.paused){
+      playSong.play()
+    }else{
+     playSong.currentTime = 0
+    }
 };
-togglePlay()
+
