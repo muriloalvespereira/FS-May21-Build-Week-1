@@ -12,7 +12,7 @@ body {
 .bi-patch-check-fill {
   font-size: larger;
 }
-.album-name > p {
+.ms-am-name > p {
   font-size: 15px;
   font-weight: 500;
 }
@@ -328,6 +328,10 @@ p img {
 
 .rowz:hover .play-button-list::before {
   opacity: 1;
+}
+.style-menu-sticy {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .counting-play {
