@@ -350,9 +350,9 @@ p img {
   }
 }
 .rowz:hover {
-  background-color: rgb(56, 55, 55);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
-  border: solid 1px rgb(56, 55, 55);
+  border: solid 1px rgba(56, 55, 55, 0.1);
 }
 .heart svg,
 .dots {
@@ -545,14 +545,19 @@ body {
 }
 
 .song-info {
-  border-bottom: solid 1px rgb(100, 99, 99);
   margin-bottom: 2rem;
   padding-bottom: 0;
   position: sticky;
-  top: 68px;
-  z-index: 500;
-  padding-left: 32px;
+  top: 67px;
+  z-index: 11;
+  padding-left: 30px;
   padding-right: 40px;
+}
+.margin-song {
+  border-bottom: solid 1px rgb(100, 99, 99);
+}
+.margin-info {
+  border-bottom: solid 1px rgb(100, 99, 99);
 }
 .add-bk {
   background-color: #181818;

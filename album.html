@@ -234,7 +234,10 @@
               </div>
             </div>
             <!-- ----------------- NAV BAR ----------------- -->
-            <div class="row pt-3 pb-3 px-3 justify-content-between navrow">
+            <div
+              class="row pt-3 pb-3 px-3 justify-content-between navrow"
+              style="z-index: 12"
+            >
               <div class="btn-nav d-flex">
                 <div class="buttom-nav-left">
                   <svg
@@ -386,13 +389,14 @@
           <section class="all-songs">
             <div class="container-songs mt-5">
               <div class="row song-info pt-1">
-                <div class="col-4 d-flex pl-5">
+                <div class="col-4 d-flex">
                   <div class="style-menu-sticy">#</div>
+                  <p class="hide-num mb-2 padding-list" style="width: 10px"></p>
                   <div class="pl-3 style-menu-sticy">TITLE</div>
                 </div>
                 <div class="col-3 albums-align style-menu-sticy">ALBUM</div>
                 <div class="col-3 added-align style-menu-sticy">DATE ADDED</div>
-                <div class="col-2">
+                <div class="col-2 pl-4">
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path
                       class="style-menu-sticy"
@@ -401,10 +405,12 @@
                     ></path>
                   </svg>
                 </div>
+                <div class="col-11 margin-info margin-info2"></div>
+                <div class="col-1 margin-info margin-info2"></div>
               </div>
 
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                     onclick="playSong()"
@@ -456,7 +462,7 @@
               </div>
 
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -503,7 +509,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -550,7 +556,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -597,7 +603,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -644,7 +650,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -691,7 +697,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -738,7 +744,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -785,7 +791,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -832,7 +838,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -879,7 +885,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -926,7 +932,7 @@
                 </div>
               </div>
               <div class="row rowz ml-3 mr-4 pt-1 mb-2">
-                <div class="col-4 padding-img d-flex pt-1 pl-5">
+                <div class="col-4 padding-img d-flex pt-1">
                   <div
                     class="num-icon d-flex position-relative play-button-list"
                   >
@@ -1201,6 +1207,24 @@
             $(".song-info").addClass("add-bk");
           } else {
             $(".song-info").removeClass("add-bk");
+          }
+        });
+      });
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 368) {
+            $(".song-info").addClass("margin-song");
+          } else {
+            $(".song-info").removeClass("margin-song");
+          }
+        });
+      });
+      jQuery(function () {
+        jQuery(window).scroll(function () {
+          if (jQuery(this).scrollTop() > 368) {
+            $(".margin-info2").removeClass("margin-info");
+          } else {
+            $(".margin-info2").addClass("margin-info");
           }
         });
       });
