@@ -331,8 +331,7 @@ a:hover {
 }
 
 .play-bottom {
-  bottom: 21px;
-  right: 21px;
+  position: relative;
   width: 35px;
   height: 35px;
   opacity: 1;
@@ -340,21 +339,24 @@ a:hover {
   background-color: #ffffff;
   transition: all 0.4s ease;
 }
-.play-bottom::before {
+.fa-play {
   position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-left: 10px solid rgb(0, 0, 0);
-  border-bottom: 7px solid transparent;
-  top: 4px;
-  right: -3px;
+  top: 12px;
+  right: 0px;
   bottom: 0;
-  left: 0;
-  margin: auto;
+  left: 13px;
+  font-size: 12px;
+  color: black;
 }
-
+.fa-pause {
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  bottom: 0;
+  left: 12px;
+  font-size: 12px;
+  color: black;
+}
 .margin-volume {
   margin-top: 43px;
 }
@@ -518,8 +520,9 @@ a:hover {
 }
 
 .card-img-bottom {
-  width: 90px;
+  width: 70px;
   height: 50px;
+  /* background: url(""); */
 }
 .direction-bar {
   flex-direction: column;
@@ -544,19 +547,18 @@ a:hover {
   font-size: 14px;
 }
 .heart-bottom {
-  transform: translateY(24px);
-  left: 70px;
+  /* transform: translateY(24px);
+  left: 70px; */
 }
 .row-bottom {
   margin-left: 1px;
 }
 
 .window-btn-bottom {
-  padding-top: 28px;
-  margin-left: 20px;
+  padding-left: 0px;
 }
 .queue-btn {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .last-col {
@@ -591,7 +593,7 @@ svg:hover {
   }
 }
 
-input[type="range"] {
+/* input[type="range"] {
   height: 3px;
   width: 100%;
   -webkit-appearance: none;
@@ -663,7 +665,7 @@ input[type="range"]:active::-webkit-slider-runnable-track {
 }
 input[type="range"]:focus::-webkit-slider-track {
   background-color: #32aa56;
-}
+} */
 
 .list-unstyled > li:hover {
   cursor: pointer;

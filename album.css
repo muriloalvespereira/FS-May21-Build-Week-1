@@ -519,15 +519,6 @@ form .fas {
   right: 1rem;
 }
 
-body {
-  background: rgb(19, 19, 19);
-  background: linear-gradient(
-    0deg,
-    rgba(19, 19, 19, 1) 60%,
-    rgba(60, 94, 88, 1) 92%
-  );
-  color: white;
-}
 .jumbotron {
   background: rgb(80, 126, 117);
   background: linear-gradient(
