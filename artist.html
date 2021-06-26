@@ -208,7 +208,7 @@
                 <i class="bi bi-patch-check-fill text-primary"></i> Verified
                 Artist
               </p>
-              <h1 class="name font-weight-bolder">Ed Sheeran</h1>
+              <h1 class="name font-weight-bolder"></h1>
               <p class="number-listner">50,466,868 monthly listners</p>
             </div>
             <!-- ----------------- NAV BAR ----------------- -->
@@ -380,13 +380,9 @@
                           <p class="hide-num mb-2">1</p>
                         </div>
                         <div class="imgg mx-4">
-                          <img
-                            class="img-thumb"
-                            src="./img/edsheeran.jpg"
-                            alt=""
-                          />
+                          <img class="img-thumb" alt="" />
                         </div>
-                        <p class="album-names mb-lg-2 pt-2">Perfect</p>
+                        <p class="album-names mb-lg-2 pt-2"></p>
                       </div>
                     </div>
                     <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
@@ -434,13 +430,9 @@
                           <p class="hide-num mb-2">2</p>
                         </div>
                         <div class="imgg mx-4">
-                          <img
-                            class="img-thumb"
-                            src="./img/edsheeran1.jpg"
-                            alt=""
-                          />
+                          <img class="img-thumb" alt="" />
                         </div>
-                        <p class="album-names mb-lg-2 pt-2">Shape of you</p>
+                        <p class="album-names mb-lg-2 pt-2"></p>
                       </div>
                     </div>
                     <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
@@ -488,13 +480,9 @@
                           <p class="hide-num mb-2">3</p>
                         </div>
                         <div class="imgg mx-4">
-                          <img
-                            class="img-thumb"
-                            src="./img/edsheeran3.jpg"
-                            alt=""
-                          />
+                          <img class="img-thumb" alt="" />
                         </div>
-                        <p class="album-names mb-lg-2 pt-2">Photograph</p>
+                        <p class="album-names mb-lg-2 pt-2"></p>
                       </div>
                     </div>
                     <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
@@ -542,13 +530,9 @@
                           <p class="hide-num mb-2">4</p>
                         </div>
                         <div class="imgg mx-4">
-                          <img
-                            class="img-thumb"
-                            src="./img/edsheeran1.jpg"
-                            alt=""
-                          />
+                          <img class="img-thumb" alt="" />
                         </div>
-                        <p class="album-names mb-lg-2 pt-2">Afterglow</p>
+                        <p class="album-names mb-lg-2 pt-2"></p>
                       </div>
                     </div>
                     <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
@@ -596,15 +580,9 @@
                           <p class="hide-num mb-2">5</p>
                         </div>
                         <div class="imgg mx-4">
-                          <img
-                            class="img-thumb"
-                            src="./img/edsheran2.jpg"
-                            alt=""
-                          />
+                          <img class="img-thumb" alt="" />
                         </div>
-                        <p class="album-names mb-lg-2 pt-2">
-                          Thinking out loud
-                        </p>
+                        <p class="album-names mb-lg-2 pt-2"></p>
                       </div>
                     </div>
                     <div class="col-3 d-lg-block d-sm-none px-0 text-white-50">
@@ -655,11 +633,7 @@
                   </div>
                   <div class="col d-flex">
                     <div class="imgg-right">
-                      <img
-                        src="./img/Adam-Lambert-ALBUM-COVER.jpg"
-                        class="img-thumb"
-                        alt=""
-                      />
+                      <img class="img-thumb img-thumb-artist" alt="" />
                     </div>
                     <div class="last-img pl-3">
                       <p class="text-white-50 posted">
@@ -667,9 +641,9 @@
                           src="/img/ED.jpg"
                           class="rounded rounded-circle px-1 py-1"
                           alt=""
-                        />Posted By Ed Sheeran
+                        />Posted By <span class="postedBy"></span>
                       </p>
-                      <p class="album-name-small pl-1">Ed Sheeran Best Of</p>
+                      <p class="album-name-small pl-1"></p>
                       <p class="text-white-50 posted pl-1">Playlist</p>
                     </div>
                   </div>
@@ -969,11 +943,6 @@
           <div class="row row-bottom">
             <div class="col img-nav-bottom">
               <div class="card-img-bottom"></div>
-              <!-- <img
-                src="./img/smalldrake.jpg"
-                class="card-img-bottom img-fluid"
-                alt="..."
-              /> -->
               <div class="photo-play">
                 <i class="fas fa-chevron-up"></i>
               </div>
@@ -1063,7 +1032,9 @@
             </div>
           </div>
           <div class="d-flex mt-3">
-            <div id="current-duration" style="color: white">00:00</div>
+            <div id="current-duration" class="pr-2" style="color: white">
+              00:00
+            </div>
             <input
               type="range"
               min="0"
@@ -1072,7 +1043,9 @@
               id="seekbar"
               class="w-100"
             />
-            <div id="total-duration" style="color: white">00:00</div>
+            <div id="total-duration" class="pl-2" style="color: white">
+              00:00
+            </div>
           </div>
         </div>
         <div class="col">
@@ -1174,6 +1147,100 @@
           }
         });
       });
+    </script>
+    <script>
+      window.onload = () => {
+        let takeAlbum;
+        function getData() {
+          fetch(
+            "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
+              nameArtist,
+            {
+              method: "GET",
+            }
+          )
+            .then((resp) => resp.json())
+            .then(({ data }) => {
+              console.log(data);
+              takeAlbum = data[0].album.id;
+              console.log("para saber", takeAlbum);
+              let albumNames = document.querySelectorAll(".album-names");
+              let smallCovers = document.querySelectorAll(".img-thumb");
+              let insertAudios = document.querySelectorAll(".hide-num");
+              let getClick = document.querySelectorAll(".num-icon");
+              for (let i = 0; i <= 4; i++) {
+                albumNames[i].innerText = data[i].title_short;
+                insertAudios[i].insertAdjacentHTML(
+                  "beforebegin",
+                  `<audio src="${data[i].preview}"></audio>`
+                );
+                getClick[i].addEventListener("click", function () {
+                  event.currentTarget.parentNode.querySelector("audio").play();
+                });
+              }
+              for (let i = 0; i <= 4; i++) {
+                smallCovers[i].src = data[i].album.cover_small;
+              }
+              let artistSmall = document.querySelector(".img-thumb-artist");
+              artistSmall.src = data[0].artist.picture_medium;
+
+              //           let takeBody = document.querySelector("body");
+              //           takeBody.style.background = `linear-gradient(
+              //   360deg,
+              //   rgba(18, 18, 18, 1) 0%,
+              //   rgba(18, 18, 18, 1) 65%,
+              //   rgba(80, 16, 54, 1) 79%
+              // );`
+              // data.forEach((titles) => {
+              //   displaySongs.insertAdjacentHTML(
+              //     "beforeend",
+              //     `         `
+              //   );
+              // });
+              getAlbum();
+            });
+        }
+        function getAlbum() {
+          fetch(
+            "https://striveschool-api.herokuapp.com/api/deezer/album/" +
+              takeAlbum,
+            {
+              method: "GET",
+            }
+          )
+            .then((resp) => resp.json())
+            .then((data) => {});
+        }
+
+        let id = new URLSearchParams(window.location.search).get("id");
+        let nameArtist;
+        fetch(
+          "https://striveschool-api.herokuapp.com/api/deezer/artist/" + id,
+          {
+            method: "GET",
+          }
+        )
+          .then((resp) => resp.json())
+          .then((data) => {
+            nameArtist = data.name.toLowerCase();
+            console.log(nameArtist);
+            console.log(data);
+            let takeName = document.querySelector(".name");
+            let takeBackCover = document.querySelector(".img-bgd");
+            let takeNameTop = document.querySelector(".name-top");
+            let albumNameSmall = document.querySelector(".album-name-small");
+            let smallImg = document.querySelector(".rounded-circle");
+            let postedBy = document.querySelector(".postedBy");
+
+            takeName.innerText = data.name;
+            takeNameTop.innerText = data.name;
+            takeBackCover.style.backgroundImage = `url(${data.picture_big})`;
+            albumNameSmall.innerText = data.name;
+            smallImg.src = data.picture_small;
+            postedBy.innerText = data.name;
+            getData();
+          });
+      };
     </script>
 
     <!-- <script>

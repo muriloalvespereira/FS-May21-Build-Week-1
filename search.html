@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./search.css" />
     <link rel="stylesheet" href="sidebar.css" />
     <script
       src="https://kit.fontawesome.com/1a2c6a184e.js"
@@ -250,6 +250,25 @@
                     ></polyline>
                   </svg>
                 </div>
+                <div class="content position-relative">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-search position-absolute svg-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                  <input
+                    type="search"
+                    class="ml-3"
+                    oninput="searchAll(event)"
+                  />
+                </div>
               </div>
               <div class="buttom-avatar-nav">
                 <div class="avatar-nav d-flex justify-content-between pb-1">
@@ -330,208 +349,16 @@
               class="container main-container pl-4 mt-5"
               style="max-width: 100%"
             >
-              <h5 class="pt-4">Good Morning</h5>
-              <div class="row px-3 pt-2">
-                <div class="col px-0 mr-3">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (18).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Burning Jazz-rock Fusion</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 mr-3 second-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (14).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Liked Songs</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 third-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (15).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Metal Ballads</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 fourth-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (16).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">POST HUMAN: SURVIVAL</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 fifth-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (17).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">This is Joe Bonamassa</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row px-3 pt-2">
-                <div class="col px-0 mr-3">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (18).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Midian</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 mr-3 second-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (14).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">Nymphetamine</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 third-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (15).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">amo</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 fourth-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (16).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">LE BASK</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col px-0 fifth-card-row">
-                  <div class="card-top-color mb-3" style="max-width: 540px">
-                    <div class="row no-gutters">
-                      <div class="col-md-4">
-                        <img
-                          src="./assets/tile (17).jpg"
-                          class="card-pic"
-                          alt="..."
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <p class="card-text">opeth</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row justify-content-between px-3">
-                <div class="d-flex">
-                  <h6 class="mt-3 h6-body">Recently Played</h6>
-                </div>
-                <div class="d-flex">
-                  <h6 class="see-all mt-3">SEE ALL</h6>
-                </div>
-              </div>
+              <h5 class="pt-4 mb-4">Recently Searched</h5>
 
-              <div class="row px-3 manual-query">
-                <div class="col pl-0">
+              <div class="row row-cards pl-0 pr-3 manual-query">
+                <div class="col-2 d-none d-md-block">
                   <div class="card h-100">
                     <div class="position-relative">
                       <img
                         src="./img/1517966385artwork.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="..."
+                        class="card-img-top img-fluid rounded-img py-3 px-2"
+                        alt="the weeknd"
                       />
 
                       <div class="play"></div>
@@ -539,14 +366,14 @@
 
                     <div class="card-body px-2 pt-0">
                       <h5 class="card-title mb-1 text-white">
-                        Impaulsive with Logan pau
+                        Armchair Expert with Dax Shepard
                       </h5>
-                      <p class="card-text text-white-50">Logan Paul</p>
+                      <p class="card-text text-white-50">Armchair Umbrella</p>
                     </div>
                   </div>
                 </div>
 
-                <div class="col">
+                <div class="col-2">
                   <div class="card h-100">
                     <div class="position-relative">
                       <img
@@ -566,7 +393,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col d-none d-sm-block">
+                <div class="col-2 d-none d-sm-block">
                   <div class="card h-100">
                     <div class="position-relative">
                       <img
@@ -588,12 +415,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="col d-none d-md-block">
+                <div class="col-2 d-none d-md-block">
                   <div class="card h-100">
                     <div class="position-relative">
                       <img
                         src="./img/1517966385artwork.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
+                        class="card-img-top img-fluid rounded-img py-3 px-2"
                         alt="the weeknd"
                       />
 
@@ -605,44 +432,6 @@
                         Armchair Expert with Dax Shepard
                       </h5>
                       <p class="card-text text-white-50">Armchair Umbrella</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col d-none d-lg-block">
-                  <div class="card h-100">
-                    <div class="position-relative">
-                      <img
-                        src="./img/1200x1200bb.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="..."
-                      />
-
-                      <div class="play"></div>
-                    </div>
-
-                    <div class="card-body px-2 pt-0">
-                      <h5 class="card-title mb-1 text-white">
-                        The Yang Gang Podcast
-                      </h5>
-                      <p class="card-text text-white-50">Yang Gang Podcast</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col pr-0 d-none d-xl-block">
-                  <div class="card h-100">
-                    <div class="position-relative">
-                      <img
-                        src="./img/dualipa.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="..."
-                      />
-
-                      <div class="play"></div>
-                    </div>
-
-                    <div class="card-body px-2 pt-0">
-                      <h5 class="card-title mb-1 text-white">Dua Lipa</h5>
-                      <p class="card-text text-white-50">Artist</p>
                     </div>
                   </div>
                 </div>
@@ -651,142 +440,30 @@
               <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
               <div class="row justify-content-between px-3">
                 <div class="d-flex">
-                  <h6 class="mt-3 h6-body">Shows to try</h6>
-                </div>
-                <div class="d-flex">
-                  <h6 class="see-all mt-3">SEE ALL</h6>
-                </div>
-              </div>
-              <div class="row px-3">
-                <div class="d-flex">
-                  <h6 class="sub-title">
-                    Podcasts we think you'll get hooked on.
-                  </h6>
+                  <h5 class="mt-4 mb-3 h6-body">Favorites Genres</h5>
                 </div>
               </div>
               <div class="row px-3 manual-query">
-                <div class="col pl-0">
-                  <div class="card h-100">
-                    <div class="position-relative">
-                      <img
-                        src="./img/1517966385artwork.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="..."
-                      />
+                <div class="col-4 pl-0">
+                  <div class="position-relative px-0">
+                    <img
+                      src="./img/doublecards.jpg"
+                      class="card-img-top img-fluid rounded-img-card py-3"
+                      alt="..."
+                    />
 
-                      <div class="play"></div>
-                    </div>
-
-                    <div class="card-body px-2 pt-0">
-                      <h5 class="card-title mb-1 text-white">
-                        Impaulsive with Logan pau
-                      </h5>
-                      <p class="card-text text-white-50">Logan Paul</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card h-100">
-                    <div class="position-relative">
-                      <img
-                        src="./img/image.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="..."
-                      />
-
-                      <div class="play"></div>
-                    </div>
-
-                    <div class="card-body px-2 pt-0">
-                      <h5 class="card-title mb-1 text-white">
-                        Impaulsive with Logan pau
-                      </h5>
-                      <p class="card-text text-white-50">Logan Paul</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col d-none d-sm-block">
-                  <div class="card h-100">
-                    <div class="position-relative">
-                      <img
-                        src="./img/timferrissshowart-1400x1400.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="..."
-                      />
-
-                      <div class="play"></div>
-                    </div>
-
-                    <div class="card-body px-2 pt-0">
-                      <h5 class="card-title mb-1 text-white">
-                        The Tim Ferriss Show
-                      </h5>
-                      <p class="card-text text-white-50">
-                        Tim Ferriss: Best Selling Author, Human Guinea Pig
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col d-none d-md-block">
-                  <div class="card h-100">
-                    <div class="position-relative">
-                      <img
-                        src="./img/1517966385artwork.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="the weeknd"
-                      />
-
-                      <div class="play"></div>
-                    </div>
-
-                    <div class="card-body px-2 pt-0">
-                      <h5 class="card-title mb-1 text-white">
-                        Armchair Expert with Dax Shepard
-                      </h5>
-                      <p class="card-text text-white-50">Armchair Umbrella</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col d-none d-lg-block">
-                  <div class="card h-100">
-                    <div class="position-relative">
-                      <img
-                        src="./img/1200x1200bb.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="..."
-                      />
-
-                      <div class="play"></div>
-                    </div>
-
-                    <div class="card-body px-2 pt-0">
-                      <h5 class="card-title mb-1 text-white">
-                        The Yang Gang Podcast
-                      </h5>
-                      <p class="card-text text-white-50">Yang Gang Podcast</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col pr-0 d-none d-xl-block">
-                  <div class="card h-100">
-                    <div class="position-relative">
-                      <img
-                        src="./img/dualipa.jpg"
-                        class="card-img-top img-fluid rounded py-3 px-2"
-                        alt="..."
-                      />
-
-                      <div class="play"></div>
-                    </div>
-
-                    <div class="card-body px-2 pt-0">
-                      <h5 class="card-title mb-1 text-white">Dua Lipa</h5>
-                      <p class="card-text text-white-50">Artist</p>
-                    </div>
+                    <div class="play"></div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div
+              class="container d-none container-two pl-4 mt-5"
+              style="max-width: 100%"
+            >
+              <h5 class="pt-4 mb-4 d-block">Best Results</h5>
+              <div class="row row-cards manual-query main-container-two"></div>
+              <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
             </div>
           </div>
         </div>
@@ -952,6 +629,128 @@
 
     <div style="height: 150px"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+      let count = 0;
+      let displaySongs = document.querySelector(".main-container-two");
+
+      function searchAll(e) {
+        let takeValue = e.target.value.toLowerCase();
+        let displayNoneCards = document.querySelector(".main-container");
+        let displayCards = document.querySelector(".container-two");
+        let displayContainer = document.querySelector(".main-container-two");
+        if (takeValue.length > 0) {
+          displayNoneCards.classList.add("d-none");
+        } else {
+          displayNoneCards.classList.remove("d-none");
+        }
+        if (takeValue.length > 0) {
+          displayCards.classList.remove("d-none");
+        } else {
+          displayCards.classList.add("d-none");
+        }
+        if (takeValue.length > 0) {
+          count++;
+          firstBtn(takeValue);
+        } else {
+          displayContainer.innerHTML = "";
+        }
+      }
+
+      function firstBtn(query) {
+        console.log(query);
+
+        if (count === 1) {
+          displaySongs.innerHTML = "";
+          fetch(
+            "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
+              query,
+            {
+              method: "GET",
+            }
+          )
+            .then((resp) => resp.json())
+            .then(({ data }) => {
+              // let displaySongs = document.querySelector(".main-container-two");
+              data.forEach((titles) => {
+                displaySongs.insertAdjacentHTML(
+                  "beforeend",
+                  `
+                  <div class="col-2 d-none d-sm-block mb-3">
+                    <div class="card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="${titles.album.cover_medium}"
+                          class="card-img-top img-fluid rounded py-3 px-2"
+                          alt="..."
+                        />
+
+                        <div class="play"></div>
+                      </div>
+
+                      <div class="card-body px-2 pt-0">
+                       <a href="./artist.html?id=${titles.artist.id}">
+                          <h5 class="card-title mb-1 text-white">
+                           ${titles.artist.name}
+                          </h5>
+                       </a>
+                        <p class="card-text text-white-50">
+                          Artist
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                `
+                );
+              });
+            });
+        } else {
+          displaySongs.innerHTML = "";
+          count = 0;
+          fetch(
+            "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
+              query,
+            {
+              method: "GET",
+            }
+          )
+            .then((resp) => resp.json())
+            .then(({ data }) => {
+              displaySongs = document.querySelector(".main-container-two");
+              data.forEach((titles) => {
+                displaySongs.insertAdjacentHTML(
+                  "beforeend",
+                  `
+                  <div class="col-2 d-none d-sm-block mb-3">
+                    <div class="card h-100">
+                      <div class="position-relative">
+                        <img
+                          src="${titles.album.cover_medium}"
+                          class="card-img-top img-fluid rounded py-3 px-2"
+                          alt="..."
+                        />
+
+                        <div class="play"></div>
+                      </div>
+
+                      <div class="card-body px-2 pt-0">
+                        <a href="./artist.html?id=${titles.artist.id}">
+                          <h5 class="card-title mb-1 text-white">
+                           ${titles.artist.name}
+                          </h5>
+                        </a>
+                        <p class="card-text text-white-50">
+                          Artist
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                `
+                );
+              });
+            });
+        }
+      }
+    </script>
     <script>
       let showUpAlbum = document.querySelector(".photo-play");
       let showUpAlbumOne = document.querySelector(".img-nav-bottom");

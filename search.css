@@ -1,11 +1,5 @@
 body {
-  background: rgb(24, 24, 24);
-  background: linear-gradient(
-    360deg,
-    rgba(24, 24, 24, 1) 69%,
-    rgba(47, 11, 11, 1) 88%,
-    rgba(62, 8, 8, 1) 100%
-  );
+  background: rgb(18, 18, 18);
 }
 .big-row {
   margin-left: 0px;
@@ -143,12 +137,6 @@ span {
   font-family: "Helvetica", Arial, sans-serif;
   font-weight: bold;
 }
-.posted span {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 13px;
-  font-family: "Helvetica", Arial, sans-serif;
-  font-weight: 400;
-}
 .img-avatar {
   width: 25px;
   height: 25px;
@@ -197,6 +185,26 @@ a:hover {
 }
 .card-top-color {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.rounded-img {
+  border-radius: 50%;
+}
+.rounded-img-card {
+  border-radius: 40px;
+}
+.content input {
+  border-radius: 20px;
+  background: white;
+  padding: 10px;
+  width: 400px;
+  height: 38px;
+  border: none;
+  padding-left: 50px;
+}
+.content input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
 }
 
 .card-img-top {
@@ -345,10 +353,6 @@ a:hover {
   background-color: #ffffff;
   transition: all 0.4s ease;
 }
-.num-icon {
-  cursor: pointer;
-}
-
 .fa-play {
   position: absolute;
   top: 12px;
@@ -379,18 +383,6 @@ a:hover {
   opacity: 1;
   transform: translateY(-5px);
 }
-input[type="range"]::-webkit-slider-thumb {
-  background-color: green;
-}
-
-input[type="range"]::-moz-range-thumb {
-  background-color: green;
-}
-
-input[type="range"]::-ms-thumb {
-  background-color: green;
-}
-
 .img-nav-bottom:hover {
   cursor: pointer;
 }
@@ -443,6 +435,7 @@ input[type="range"]::-ms-thumb {
   bottom: 0px;
   left: 0px;
 }
+
 .card-title {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -540,7 +533,6 @@ input[type="range"]::-ms-thumb {
   background-color: rgb(18, 18, 18);
   z-index: 999;
 }
-
 .card-img-bottom {
   width: 70px;
   height: 50px;
@@ -593,6 +585,11 @@ input[type="range"]::-ms-thumb {
 }
 svg {
   fill: rgba(255, 255, 255, 0.5);
+}
+.svg-search {
+  fill: black !important;
+  transform: translateX(30px);
+  top: 10px;
 }
 svg:hover {
   fill: white;

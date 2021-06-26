@@ -198,7 +198,6 @@ p img {
 }
 
 .img-bgd {
-  background-image: url("./img/Adam-Lambert-ALBUM-COVER.jpg");
   position: relative;
   min-height: 350px;
   background-attachment: fixed;
@@ -315,10 +314,12 @@ p img {
   left: 0;
   margin: auto;
   opacity: 0;
+  cursor: pointer;
 }
 
 .rowz:hover .play-button-list::before {
   opacity: 1;
+  cursor: pointer;
 }
 
 .counting-play {
