@@ -948,8 +948,8 @@
               </div>
             </div>
             <div class="col d-flex direction-bar pl-3 pt-1">
-              <h6 class="pt-4 mb-0 h6-bottom text-nowrap">Survival</h6>
-              <p class="mb-0 p-bottom">Drake</p>
+              <h6 class="pt-4 mb-0 h6-bottom text-nowrap"></h6>
+              <p class="mb-0 p-bottom"></p>
             </div>
             <div class="col heart-bottom d-flex align-items-center">
               <svg
@@ -1151,6 +1151,7 @@
     <script>
       window.onload = () => {
         let takeAlbum;
+
         function getData() {
           fetch(
             "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
@@ -1174,8 +1175,15 @@
                   "beforebegin",
                   `<audio src="${data[i].preview}"></audio>`
                 );
+
+                let title = document.querySelector(".direction-bar h6");
+                title.innerText = data[0].title_short;
+                let getSmallPic = document.querySelector(".card-img-bottom");
+                getSmallPic.style.background = `url('${data[0].album.cover_small}') no-repeat center center /
+          cover`;
+
                 getClick[i].addEventListener("click", function () {
-                  event.currentTarget.parentNode.querySelector("audio").play();
+                  playAudio(event);
                 });
               }
               for (let i = 0; i <= 4; i++) {
@@ -1183,23 +1191,37 @@
               }
               let artistSmall = document.querySelector(".img-thumb-artist");
               artistSmall.src = data[0].artist.picture_medium;
-
-              //           let takeBody = document.querySelector("body");
-              //           takeBody.style.background = `linear-gradient(
-              //   360deg,
-              //   rgba(18, 18, 18, 1) 0%,
-              //   rgba(18, 18, 18, 1) 65%,
-              //   rgba(80, 16, 54, 1) 79%
-              // );`
-              // data.forEach((titles) => {
-              //   displaySongs.insertAdjacentHTML(
-              //     "beforeend",
-              //     `         `
-              //   );
-              // });
               getAlbum();
             });
         }
+        let audios = {};
+        function playAudio(event) {
+          event.currentTarget.parentNode.querySelector("audio").play();
+          audios.file = event.currentTarget.parentNode
+            .querySelector("audio")
+            .getAttribute("src");
+          audios.cover = event.currentTarget.parentNode
+            .querySelector(".img-thumb")
+            .getAttribute("src");
+          audios.name =
+            event.currentTarget.parentNode.querySelector(
+              ".album-names"
+            ).innerText;
+
+          audios.artist = document.querySelector(".name").innerText;
+          updateBottomBar();
+        }
+
+        function updateBottomBar() {
+          let getSmallPic = document.querySelector(".card-img-bottom");
+          getSmallPic.style.background = `url('${audios.cover}') no-repeat center center /
+          cover`;
+          let title = document.querySelector(".direction-bar h6");
+          title.innerText = audios.name;
+          let artist = document.querySelector(".direction-bar p");
+          artist.innerText = audios.artist;
+        }
+
         function getAlbum() {
           fetch(
             "https://striveschool-api.herokuapp.com/api/deezer/album/" +
@@ -1231,7 +1253,8 @@
             let albumNameSmall = document.querySelector(".album-name-small");
             let smallImg = document.querySelector(".rounded-circle");
             let postedBy = document.querySelector(".postedBy");
-
+            let artist = document.querySelector(".direction-bar p");
+            artist.innerText = data.name;
             takeName.innerText = data.name;
             takeNameTop.innerText = data.name;
             takeBackCover.style.backgroundImage = `url(${data.picture_big})`;
@@ -1255,7 +1278,8 @@
           el.style.setProperty("--value", el.value);
         });
     </script> -->
-    <script src="index.js" type="module"></script>
+    <!-- <script src="index.js" type="module"></script> -->
+    <!-- <script src="takesongs.js"></script> -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
