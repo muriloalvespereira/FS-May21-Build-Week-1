@@ -54,6 +54,12 @@ body {
   padding-left: 2px;
   cursor: pointer;
 }
+h2 {
+  color: white;
+  font-weight: 700;
+  transform: translateY(15px);
+  left: 15px;
+}
 .buttom-nav-right {
   width: 30px;
   height: 30px;
@@ -153,6 +159,12 @@ h6 {
   font-weight: 700;
   font-size: 16px;
 }
+.popCard {
+  height: 128px;
+  width: 128px;
+  transform: translateY(85px) rotate(25deg);
+  right: -20px;
+}
 .a-changes {
   color: rgba(255, 255, 255, 0.5);
   font-family: "Helvetica", Arial, sans-serif;
@@ -191,7 +203,11 @@ a:hover {
   border-radius: 50%;
 }
 .rounded-img-card {
-  border-radius: 40px;
+  border-radius: 8px;
+  background-color: #8d67ab;
+  height: 200px;
+  width: 380px;
+  overflow: hidden;
 }
 .content input {
   border-radius: 20px;

@@ -89,7 +89,9 @@
                   </svg>
                 </div>
                 <div class="d-flex">
-                  <h6 class="d-flex pl-3 mb-0">Search</h6>
+                  <a href="./search.html">
+                    <h6 class="d-flex pl-3 mb-0">Search</h6></a
+                  >
                 </div>
               </div>
               <div
@@ -410,9 +412,7 @@
                           text-white-50
                           pr-3
                         "
-                      >
-                        4:10
-                      </p>
+                      ></p>
                       <div class="dots text-white">...</div>
                     </div>
                   </div>
@@ -460,9 +460,7 @@
                           text-white-50
                           pr-3
                         "
-                      >
-                        4:10
-                      </p>
+                      ></p>
                       <div class="dots text-white">...</div>
                     </div>
                   </div>
@@ -510,9 +508,7 @@
                           text-white-50
                           pr-3
                         "
-                      >
-                        4:10
-                      </p>
+                      ></p>
                       <div class="dots text-white">...</div>
                     </div>
                   </div>
@@ -560,9 +556,7 @@
                           text-white-50
                           pr-3
                         "
-                      >
-                        4:10
-                      </p>
+                      ></p>
                       <div class="dots text-white">...</div>
                     </div>
                   </div>
@@ -610,9 +604,7 @@
                           text-white-50
                           pr-3
                         "
-                      >
-                        4:10
-                      </p>
+                      ></p>
                       <div class="dots text-white">...</div>
                     </div>
                   </div>
@@ -949,7 +941,7 @@
             </div>
             <div class="col d-flex direction-bar pl-3 pt-1">
               <h6 class="pt-4 mb-0 h6-bottom text-nowrap"></h6>
-              <p class="mb-0 p-bottom"></p>
+              <p class="mb-0 p-bottom text-nowrap"></p>
             </div>
             <div class="col heart-bottom d-flex align-items-center">
               <svg
@@ -1150,8 +1142,6 @@
     </script>
     <script>
       window.onload = () => {
-        let takeAlbum;
-
         function getData() {
           fetch(
             "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
@@ -1162,18 +1152,17 @@
           )
             .then((resp) => resp.json())
             .then(({ data }) => {
-              console.log(data);
-              takeAlbum = data[0].album.id;
-              console.log("para saber", takeAlbum);
               let albumNames = document.querySelectorAll(".album-names");
               let smallCovers = document.querySelectorAll(".img-thumb");
               let insertAudios = document.querySelectorAll(".hide-num");
               let getClick = document.querySelectorAll(".num-icon");
+              let insertTime = document.querySelectorAll(".song-time");
               for (let i = 0; i <= 4; i++) {
                 albumNames[i].innerText = data[i].title_short;
+                insertTime[i].innerText = secondsToMinutes(data[i].duration);
                 insertAudios[i].insertAdjacentHTML(
                   "beforebegin",
-                  `<audio src="${data[i].preview}"></audio>`
+                  `<audio src="${data[i].preview}">${data[i].duration}</audio>`
                 );
 
                 let title = document.querySelector(".direction-bar h6");
@@ -1191,15 +1180,23 @@
               }
               let artistSmall = document.querySelector(".img-thumb-artist");
               artistSmall.src = data[0].artist.picture_medium;
-              getAlbum();
+              let totalDuration = document.querySelector("#total-duration");
+          totalDuration.innerText = secondsToMinutes(data[0].duration);   
             });
         }
+
+        function secondsToMinutes(time) {
+          const minutes = Math.floor(time / 60);
+          const seconds = Math.floor(time % 60);
+          return `${("0" + minutes).slice(-2)}:${("0" + seconds).slice(-2)}`;
+        }
+
         let audios = {};
         function playAudio(event) {
-          event.currentTarget.parentNode.querySelector("audio").play();
           audios.file = event.currentTarget.parentNode
             .querySelector("audio")
             .getAttribute("src");
+          audios.play = event.currentTarget.parentNode.querySelector("audio");
           audios.cover = event.currentTarget.parentNode
             .querySelector(".img-thumb")
             .getAttribute("src");
@@ -1209,6 +1206,10 @@
             ).innerText;
 
           audios.artist = document.querySelector(".name").innerText;
+          audios.duration = parseFloat(
+            event.currentTarget.parentNode.querySelector("audio").innerText
+          );
+          console.log(audios);
           updateBottomBar();
         }
 
@@ -1220,18 +1221,9 @@
           title.innerText = audios.name;
           let artist = document.querySelector(".direction-bar p");
           artist.innerText = audios.artist;
-        }
-
-        function getAlbum() {
-          fetch(
-            "https://striveschool-api.herokuapp.com/api/deezer/album/" +
-              takeAlbum,
-            {
-              method: "GET",
-            }
-          )
-            .then((resp) => resp.json())
-            .then((data) => {});
+          let totalDuration = document.querySelector("#total-duration");
+          totalDuration.innerText = secondsToMinutes(audios.duration);
+          audios.play.play();
         }
 
         let id = new URLSearchParams(window.location.search).get("id");
@@ -1244,7 +1236,10 @@
         )
           .then((resp) => resp.json())
           .then((data) => {
-            nameArtist = data.name.toLowerCase();
+            nameArtist = data.name
+              .normalize("NFD")
+              .replace(/[^a-zA-Z0-9 ]/g, "");
+
             console.log(nameArtist);
             console.log(data);
             let takeName = document.querySelector(".name");

@@ -445,14 +445,13 @@
               </div>
               <div class="row px-3 manual-query">
                 <div class="col-4 pl-0">
-                  <div class="position-relative px-0">
+                  <div class="position-relative px-0 rounded-img-card">
+                    <h2 class="position-absolute">Pop</h2>
                     <img
-                      src="./img/doublecards.jpg"
-                      class="card-img-top img-fluid rounded-img-card py-3"
-                      alt="..."
+                      src="./img/popcard.jpg"
+                      class="position-absolute popCard"
+                      alt=""
                     />
-
-                    <div class="play"></div>
                   </div>
                 </div>
               </div>
@@ -634,7 +633,9 @@
       let displaySongs = document.querySelector(".main-container-two");
 
       function searchAll(e) {
-        let takeValue = e.target.value.toLowerCase();
+        let takeValue = e.target.value
+          .normalize("NFD")
+          .replace(/[^a-zA-Z0-9 ]/g, "");
         let displayNoneCards = document.querySelector(".main-container");
         let displayCards = document.querySelector(".container-two");
         let displayContainer = document.querySelector(".main-container-two");
