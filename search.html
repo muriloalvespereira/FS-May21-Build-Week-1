@@ -64,7 +64,11 @@
                     />
                   </svg>
                 </div>
-                <div class="d-flex"><h6 class="d-flex pl-3 mb-0">Home</h6></div>
+                <div class="d-flex">
+                  <a href="./index.html"
+                    ><h6 class="d-flex pl-3 mb-0">Home</h6></a
+                  >
+                </div>
               </div>
               <div
                 class="col-12 search d-flex align-items-center pb-3 put-color"
@@ -629,7 +633,6 @@
     <div style="height: 150px"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>
-      let count = 0;
       let displaySongs = document.querySelector(".main-container-two");
 
       function searchAll(e) {
@@ -650,7 +653,6 @@
           displayCards.classList.add("d-none");
         }
         if (takeValue.length > 0) {
-          count++;
           firstBtn(takeValue);
         } else {
           displayContainer.innerHTML = "";
@@ -659,23 +661,19 @@
 
       function firstBtn(query) {
         console.log(query);
-
-        if (count === 1) {
-          displaySongs.innerHTML = "";
-          fetch(
-            "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
-              query,
-            {
-              method: "GET",
-            }
-          )
-            .then((resp) => resp.json())
-            .then(({ data }) => {
-              // let displaySongs = document.querySelector(".main-container-two");
-              data.forEach((titles) => {
-                displaySongs.insertAdjacentHTML(
-                  "beforeend",
-                  `
+        displaySongs.innerHTML = "";
+        fetch(
+          "https://striveschool-api.herokuapp.com/api/deezer/search?q=" + query,
+          {
+            method: "GET",
+          }
+        )
+          .then((resp) => resp.json())
+          .then(({ data }) => {
+            data.forEach((titles) => {
+              displaySongs.insertAdjacentHTML(
+                "beforeend",
+                `
                   <div class="col-2 d-none d-sm-block mb-3">
                     <div class="card h-100">
                       <div class="position-relative">
@@ -701,55 +699,9 @@
                     </div>
                   </div>
                 `
-                );
-              });
+              );
             });
-        } else {
-          displaySongs.innerHTML = "";
-          count = 0;
-          fetch(
-            "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
-              query,
-            {
-              method: "GET",
-            }
-          )
-            .then((resp) => resp.json())
-            .then(({ data }) => {
-              displaySongs = document.querySelector(".main-container-two");
-              data.forEach((titles) => {
-                displaySongs.insertAdjacentHTML(
-                  "beforeend",
-                  `
-                  <div class="col-2 d-none d-sm-block mb-3">
-                    <div class="card h-100">
-                      <div class="position-relative">
-                        <img
-                          src="${titles.album.cover_medium}"
-                          class="card-img-top img-fluid rounded py-3 px-2"
-                          alt="..."
-                        />
-
-                        <div class="play"></div>
-                      </div>
-
-                      <div class="card-body px-2 pt-0">
-                        <a href="./artist.html?id=${titles.artist.id}">
-                          <h5 class="card-title mb-1 text-white">
-                           ${titles.artist.name}
-                          </h5>
-                        </a>
-                        <p class="card-text text-white-50">
-                          Artist
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                `
-                );
-              });
-            });
-        }
+          });
       }
     </script>
     <script>
